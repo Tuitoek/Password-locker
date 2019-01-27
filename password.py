@@ -1,15 +1,16 @@
 class User:
 
-   pass
-   user_list=[];
+    Class for generating instances for user.
+    
 
-    Class that generates new instances for users.
+    pass
+    user_list=[];
 
 
     def __init__(self,first_name,last_name,email,username):
 
         ...
-
+          __init__ method that helps us define properties for our objects.
 
         Args:
             first_name : New user first name.
@@ -24,3 +25,25 @@ class User:
 
 
         ...
+
+class Credentials:
+
+    Class for generating instances for credentials.
+
+    pass
+    credential_list = [];
+
+    def __init__(self,account_name,password):
+
+    ...
+
+    Args:
+      account_name : New  credentials account name.
+      password : New credentials password.
+
+    self.account_name = account_name
+    self.password = password   
+    ... 
+
+    credential_list = []; 
+
