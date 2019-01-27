@@ -1,5 +1,5 @@
 class Credentials:
-    
+
     """
     Class that generates instances for credentials.
     """
@@ -8,15 +8,17 @@ class Credentials:
 
     def __init__(self,account_name,password):
 
-    '''
+            """
 
-    Args:
-      account_name : New  credentials account name.
-      password : New credentials password.
+            Args:
+                account_name : New  credentials account name.
+                password : New credentials password.
 
-    self.account_name = account_name
-    self.password = password   
-    ''' 
+            self.account_name = account_name
+            self.password = password 
+                
+
+            """ 
 
     credential_list = []; 
 
