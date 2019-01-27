@@ -26,3 +26,10 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.last_name,"Tuitoek")
         self.assertEqual(self.new_user.email,"sjtoek13@gmail.com")
         self.assertEqual(self.new_user.username,"Tui")
+
+    def test_register_user(self):
+        """
+        test_register_user case to test if the user has been registred
+        """
+        self.new_user.test_register_user(self)
+        self.assertEqual(len(User.user_list),1)
