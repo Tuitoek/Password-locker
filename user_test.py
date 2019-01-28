@@ -1,5 +1,8 @@
 import unittest
+import string
+import random
 
+from user import Credentials
 from user import User
 
 class TestUser(unittest.TestCase):
@@ -45,7 +48,24 @@ class TestUser(unittest.TestCase):
 
         self.assertTrue(user_exists)
 
-if _name_=='_main_':
-    unittest.main()
+    def create_account(self):
+        """
+        test allows users to create new account and generate passwords.
+        """
+        self.new_account.create_account()
+        self.assertEqual(len(User.user_credentials_list),1)
+
+    def save_credentials(self):
+        """
+        Function to save a newly created user intsnace
+        """ 
+        Credential.credential_list.append(self)
+
+    def  pass_gen(size = 8,chars=string.ascii_letters + string.digits + string.punctuation):
+        return ''.join(random.choice(chars)for _ in range(size))
+
+         
+
+
 
         
