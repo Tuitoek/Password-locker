@@ -1,5 +1,7 @@
 import string
 import random
+import unittest
+
 class User:
 
     '''
@@ -103,7 +105,23 @@ class Credential:
 
         """
         Credential.user_credential_list.remove(self)
-         
+
+    @classmethod
+    def display_all_credentials(cls):
+        """
+        returns the User's credential list
+
+        """
+        return cls.user_credential_list
+
+if __name__ == '__main__' :
+    unittest.main()       
+
+    
+    
+
+
+
 
 
     
