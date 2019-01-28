@@ -7,7 +7,6 @@ class User:
 
     pass
     user_list=[];
-    account_list=[];
 
 
     def __init__(self,first_name,last_name,email,username):
@@ -31,10 +30,18 @@ class User:
 
     def register_user(self):
         """
-        register_user method registers users details into user_list 
+        method that registers and saves objects into our user_list
+        """        
+        User.user_list.append(self)
+
+    def login_user(self):
         """
-        User.user_list.append(self)    
-       
+        method that allows one to access their own personal account
+
+        """
+        if (username == user_name and password == password):
+
+           print("Log in successful")
 
 class Credential:
 
@@ -73,20 +80,7 @@ class Credential:
 
         """  
 
-    def register_user(self):
-        """
-        method that registers and saves objects into our user_list
-        """        
-        User.user_list.append(self)
-
-    def login_user(self):
-        """
-        method that allows one to access their own personal account
-
-        """
-        if (username == user_name and password == password):
-
-           print("Log in successful")
+    
 
        
 
