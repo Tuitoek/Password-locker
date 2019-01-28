@@ -42,7 +42,7 @@ class TestUser(unittest.TestCase):
         test_login_user case to test if the user can log in into the account.
         """
         self.new_user.test_login_user()
-        user_test = User("Test","test@user.com","username")
+        test_user = User("Test","test@user.com","username")
         
         user_exists = User.user_list(username)
 
@@ -55,7 +55,7 @@ class TestUser(unittest.TestCase):
         self.new_account.create_account()
         self.assertEqual(len(User.user_credentials_list),1)
 
-    def save_credentials(self):
+    def create_credentials(self):
         """
         Function to save a newly created user intsnace
         """ 
@@ -63,6 +63,13 @@ class TestUser(unittest.TestCase):
 
     def  pass_gen(size = 8,chars=string.ascii_letters + string.digits + string.punctuation):
         return ''.join(random.choice(chars)for _ in range(size))
+
+    def save_credentials(self):
+        """
+        Function to save a newly created credential
+        """
+        self.new_credential.save_credentials()
+        self.assertEqual(len(Credential.credential_list))
 
          
 
