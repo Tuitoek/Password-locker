@@ -79,6 +79,19 @@ class Credential:
         self.password = password 
 
         """  
+    def create_credentials(self):
+        """
+        For creating a new credential account
+
+        """   
+        Credential.user_credential_list.append(self)
+
+    def save_credentials(self):
+        """
+        Allows the user to save their credentials
+        """  
+        Credential.user_credential_list.append(self)
+          
 
     
 
