@@ -104,6 +104,13 @@ class TestCredentials(unittest.TestCase):
          test_credential = Credential("Test","account_name","sara334")
          self.assertEqual(len(Credential.credential_list),1)
 
+    def test_display_all_credentials(self):
+        """
+        returns all list of all contacts
+
+        """
+        self.assertEqual(Credential.display_credentials().credential_list)     
+
          
 
 
