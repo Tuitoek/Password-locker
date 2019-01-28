@@ -1,3 +1,5 @@
+import string
+import random
 class User:
 
     '''
@@ -91,7 +93,18 @@ class Credential:
         Allows the user to save their credentials
         """  
         Credential.user_credential_list.append(self)
-          
+
+    def  pass_gen(size = 8,chars=string.ascii_letters + string.digits + string.punctuation):
+        return ''.join(random.choice(chars)for _ in range(size))   
+
+    def delete_credentials(self):
+        """
+        Enables the user to delete some credentials
+
+        """
+        Credential.user_credential_list.remove(self)
+         
+
 
     
 
