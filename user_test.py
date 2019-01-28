@@ -33,3 +33,19 @@ class TestUser(unittest.TestCase):
         """
         self.new_user.test_register_user(self)
         self.assertEqual(len(User.user_list),1)
+
+    def test_login_user(self):
+        """
+        test_login_user case to test if the user can log in into the account.
+        """
+        self.new_user.test_login_user()
+        user_test = User("Test","test@user.com","username")
+        
+        user_exists = User.user_list(username)
+
+        self.assertTrue(user_exists)
+
+if _name_=='_main_':
+    unittest.main()
+
+        
