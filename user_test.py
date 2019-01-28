@@ -48,6 +48,30 @@ class TestUser(unittest.TestCase):
 
         self.assertTrue(user_exists)
 
+
+class TestCredentials(unittest.TestCase): 
+    """
+    Test class that defines test cases for credentials
+
+    Args:
+       unittest.TestCase : TestCase class that helps in creating test cases
+
+    """   
+    def setUp(self): 
+        """
+        Set up method to run before each test cases.
+
+        """  
+        self.new_credential = Credential("Instagram","mkambezz3") 
+
+    def test_init(self):
+        """
+        Used to check if the object is initialized properly
+
+        """  
+        self.assertEqual(self.new_credential.account_name,"Instagram")
+        self.assertEqual(self.new_credntial.password,"mkambezz3")
+
     def create_account(self):
         """
         test allows users to create new account and generate passwords.
@@ -70,6 +94,15 @@ class TestUser(unittest.TestCase):
         """
         self.new_credential.save_credentials()
         self.assertEqual(len(Credential.credential_list))
+
+    def delete_credential(self):
+         """
+         Function that deletes a saved credential
+
+         """
+         self.new_credential.delete_credential()
+         test_credential = Credential("Test","account_name","sara334")
+         self.assertEqual(len(Credential.credential_list),1)
 
          
 
