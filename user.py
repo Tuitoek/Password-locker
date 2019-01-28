@@ -79,4 +79,20 @@ class Credential:
         """        
         User.user_list.append(self)
 
+    def login_user(self):
+        """
+        method that allows one to access their own personal account
+
+        """
+        if (username == user_name and password == password):
+
+           print("Log in successful")
+
+       
+
+    
+
+
+
+
     
