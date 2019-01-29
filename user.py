@@ -37,6 +37,12 @@ class User:
             self.username = username
             self.password = password
 
+    def create_user(self):
+        """
+        method that creates users
+        """
+        User.user_list.append(self)   
+
     def save_user(self):
         """
         method that registers and saves objects into our user_list
