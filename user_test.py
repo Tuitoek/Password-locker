@@ -40,23 +40,19 @@ class TestUser(unittest.TestCase):
             self.assertEqual(self.new_user.username,"tui")
             self.assertEqual(self.new_user.password,"mkambez")
 
+        def test_create_user(self):
+            """
+            Test that allows one to create a user
+            """
+            self.new_user.create_user()
+            self.assertEqual(len(User.user_list),1)
+
         def test_save_user(self):
             """
             test_register_user case to test if the user has been registred
             """
             self.new_user.save_user()
-            self.assertEqual(len(User.user_list),1)
-
-        # def test_login_user(self):
-        #     """
-        #     test_login_user case to test if the user can log in into the account.
-        #     """
-        #     self.new_user.login_user()
-        #     test_user = User("Test","test@user.com","username")
-        #
-        #     user_exists = User.user_list(username)
-        #
-        #     self.assertTrue(user_exists)
+            self.assertEqual(len(User.user_list),2)
 
 
 
