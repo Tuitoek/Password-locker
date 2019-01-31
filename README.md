@@ -42,4 +42,4 @@ If need be you can contact me at sjtoek@gmail.com
 
 - One can be able to log into the application
 - One can save their own credentials
-- One can delete credentials 
+- One can delete credentialsNSE 

@@ -2,18 +2,18 @@
 from user import User
 from user import Credential
 
-def create_user(first_name,last_name,email,username,password):
+def create_user(first_name,last_name,username,email,password):
     """
     Function that allows one to create a user account
     """
-    User.create_user()
+    new_user = User(first_name,last_name,username,email,password)
+    return new_user
 
 def save_user(user):
     """
     Function for a user to log in
-
     """
-    User.save_user()
+    User.save_user(self)
 
 def save_credential(credential):
     """
@@ -64,10 +64,7 @@ def main():
             print("Enter your password")
             password = input()
 
-
-
-
-            save_user(create_user(first_name,last_name,email,username,password)) # create and save new contact.
+            save_user(create_user(first_name, last_name, username, email, password))
             print ('\n')
 
             print(f"New User {first_name} created")
